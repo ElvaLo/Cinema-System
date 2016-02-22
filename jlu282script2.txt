@@ -1,0 +1,493 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf130
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 use jlu282db;\
+load data infile '/tmp/fall2015data.txt' into table movie fields terminated by ',' lines terminated by '\\n' (movieID,name,year);\
+insert into movie values('112', "Skyfall",'2012');
+\fs24 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 select * from movie;\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs22 \cf2 \CocoaLigature0 insert into customer values('222', "Laura", "Reid", 'F', "lreid@csd.uwo.ca");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into customer values('223', "Jiaxin", "Lu", 'F', "jlu282@uwo.ca");\
+insert into customer values('224', "Bill", "Clinton", 'M', "billy@prez.com");
+\fs24 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+
+\fs22 \kerning1\expnd0\expndtw0 \CocoaLigature0 insert into customer values('225', "Hilary", "Clinton", 'F', "nextprez@pres.com");
+\fs24 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+
+\fs22 \kerning1\expnd0\expndtw0 \CocoaLigature0 insert into customer values('226', "Donald", "Trump", 'M', "nextprezalso@prez.com");
+\fs24 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+
+\fs22 \kerning1\expnd0\expndtw0 \CocoaLigature0 insert into customer values('227', "Chelsea", "Clinton", 'F', "firstdaug@prez.com");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into customer values('228', "Ivanka", "Trump", 'F', "apprentice@trump.com");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into customer values('229', "Sandra", "Bullock", 'F', "sandy@blindside.com");
+\fs24 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 select * from customer;\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs22 \cf2 \kerning1\expnd0\expndtw0 \CocoaLigature0 create table genre(movieID char(3), genre varchar(30), primary key(movieID, genre), foreign key(movieID) references movie(movieID));
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('100', "Action");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('100', "SciFi");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('101', "Animated");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('102', "Action");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('103', "Romance");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('104', "Action");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('104', "SciFi");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('105', "Action");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('105', "SciFi");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('106', "Drama");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('107', "Comedy");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('108', "Action");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('109', "Comedy");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('110', "Comedy");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('110', "Romance");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('111', "SciFi");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('111', "Action");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('111', "Comedy");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('112', "Action");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('112', "Adventure");
+\fs24 \CocoaLigature1 \
+
+\fs22 \CocoaLigature0 insert into genre values('112', "Thriller");
+\fs24 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 select * from genre;\
+\
+insert into theatreRoom values(1, 30);\
+insert into theatreRoom values(2,5);\
+insert into theatreRoom values(3, 100);\
+insert into theatreRoom values(4, 30);\
+insert into theatreRoom values(5, 6);\
+select * from theatreRoom;\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs22 \cf2 \kerning1\expnd0\expndtw0 \CocoaLigature0 insert into showing values('333', '2015-02-11', '21:30:00', '100', 1);
+\fs24 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 insert into showing values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 334
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 2015-02-11
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 19:30:00
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 100
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 2);\
+insert into showing values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 335
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 2015-02-11
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 19:00:00
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 101
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 3);\
+insert into showing values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 337
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 2015-03-12
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 19:00:00
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 102
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 1);\
+insert into showing values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 338
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 2015-03-12
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 21:00:00
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 103
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 1);\
+insert into showing values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 339
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 2015-03-13
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 19:00:00
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 103
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 2);\
+insert into showing values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 340
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 2015-03-20
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 19:00:00
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 103
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 1);\
+insert into showing values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 341
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 2015-03-20
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 21:00:00
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 104
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 1);\
+insert into showing values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 346
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 2015-03-22
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 20:30:00
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 107
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 2);\
+insert into showing values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 345
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 2015-03-22
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 21:00:00
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 108
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 3);\
+insert into showing values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 342
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 2015-03-20
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 19:00:00
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 109
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 2);\
+insert into showing values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 344
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 2015-03-21
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 19:00:00
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 110
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 1);\
+insert into showing values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 347
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 2015-03-23
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 22:00:00
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 110
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 1);\
+insert into showing values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 336
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 2015-02-11
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 21:00:00
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 111
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 2);\
+insert into showing values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 343
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 2015-03-23
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 19:30:00
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 112
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 2);\
+select * from showing;\
+\
+insert into ticketingInfo values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 222
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 333
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 4.00, 5);\
+insert into ticketingInfo values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 222
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 340
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 12.00, 1);\
+insert into ticketingInfo values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 222
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 334
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 10.00, 3);\
+insert into ticketingInfo values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 222
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 346
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 5.00, 4);\
+insert into ticketingInfo values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 223
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 334
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 30.00, 5);\
+insert into ticketingInfo values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 223
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 340
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 5.00, 1);\
+insert into ticketingInfo values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 224
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 334
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 20.00, 4);\
+insert into ticketingInfo values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 226
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 334
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 100.00, 2);\
+insert into ticketingInfo values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 227
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 334
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 5.00, 1);\
+insert into ticketingInfo values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 229
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 347
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 12.00, 5);\
+insert into ticketingInfo values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 229
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 334
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 5.00, 3);\
+insert into ticketingInfo values(
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 223
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 343
+\fs22 \CocoaLigature0 '
+\fs24 \CocoaLigature1 , 7.00, 5);\
+select * from ticketingInfo;\
+\
+select * from customer;\
+update customer set fname = 
+\fs22 \CocoaLigature0 "
+\fs24 \CocoaLigature1 Sue
+\fs22 \CocoaLigature0 "
+\fs24 \CocoaLigature1  where fname = 
+\fs22 \CocoaLigature0 "
+\fs24 \CocoaLigature1 Ivanka
+\fs22 \CocoaLigature0 "
+\fs24 \CocoaLigature1 ;\
+select * from customer;\
+\
+select * from ticketingInfo;\
+update ticketingInfo set rating = 5 where showingID in(select * from(select ticketingInfo.showingID from showing, ticketingInfo where showing.showingID = ticketingInfo.showingID and movieID = 100)tblTmp);\
+select * from ticketingInfo;\
+}
